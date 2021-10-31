@@ -9,6 +9,8 @@ var slider = tns(
     "controls": false,
     "nav": false,  
     "autoplayButtonOutput": false,
+    "autoplay": true,
+
   }
 );
 
@@ -40,5 +42,3 @@ slider.events.on('indexChanged', () => {
   clearSelecter();
   document.querySelector('.slide-icon' + (slider.getInfo().displayIndex)).classList.add('slide-icon-active');
 })
-
-console.log("Пожалуйста, проверьте в последний день, попытаюсь доделать сколько успею");

@@ -777,11 +777,12 @@ input[name=ticket-type]:checked ~ label::before {
 .amount-bold-text {
   margin-bottom: 5px;
   float: right;
+  font-size: 24px;
 }
 
 .price-text {
   margin-top: 15px;
-  letter-spacing: 1.65px;
+  /* letter-spacing: 1.65px; */
 }
 
 .buy-now {

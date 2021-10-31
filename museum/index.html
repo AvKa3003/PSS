@@ -43,11 +43,11 @@
                 <div class="entry-box first-entry-box">
                   <span class="entry-type">Детский (40 $)</span>
                   <div class="ticket-counter-form">
-                    <button class="ticket-count-change-form" type="button" onclick="this.nextElementSibling.stepDown()">
+                    <button class="change-count-button-form ticket-count-change-form" type="button" onclick="this.nextElementSibling.stepDown()">
                       –
                     </button>
-                    <input type="number" min="0" max="20" value="1" class="ticket-count-form">
-                    <button class="ticket-count-change-form" type="button" onclick="this.previousElementSibling.stepUp()">
+                    <input type="number" min="0" max="20" value="1" class="form-tickets-count form-child-count ticket-count-form">
+                    <button class="change-count-button-form ticket-count-change-form" type="button" onclick="this.previousElementSibling.stepUp()">
                       +
                     </button>
                   </div>
@@ -55,11 +55,11 @@
                 <div class="entry-box">
                   <span class="entry-type">Взрослый (60 $)</span>
                   <div class="ticket-counter-form">
-                    <button class="ticket-count-change-form" type="button" onclick="this.nextElementSibling.stepDown()">
+                    <button class="change-count-button-form ticket-count-change-form" type="button" onclick="this.nextElementSibling.stepDown()">
                       –
                     </button>
-                    <input type="number" min="0" max="20" value="1" class="ticket-count-form">
-                    <button class="ticket-count-change-form" type="button" onclick="this.previousElementSibling.stepUp()">
+                    <input type="number" min="0" max="20" value="1" class="form-tickets-count form-adult-count ticket-count-form">
+                    <button class="change-count-button-form ticket-count-change-form" type="button" onclick="this.previousElementSibling.stepUp()">
                       +
                     </button>
                   </div>
@@ -333,11 +333,11 @@
                   Ночёвка
                 </p>
                 <ul>
-                  <li class="ticket-type-item">
-                    <input type="radio" name="ticket-type" id="ticket-type-2">
+                  <li class="ticket-type-item gost-type1">
+                    <input checked type="radio" name="ticket-type" id="ticket-type-2">
                     <label for="ticket-type-2" class="light-text">Предвыбранные гостиницы</label>
                   </li>
-                  <li class="ticket-type-item">
+                  <li class="ticket-type-item gost-type2">
                     <input type="radio" name="ticket-type" id="ticket-type-3">
                     <label for="ticket-type-3" class="light-text">Самостоятельная</label>
                   </li>
@@ -352,11 +352,11 @@
                   Детский
                 </p>
                 <div class="ticket-counter">
-                  <button class="ticket-count-change minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                  <button class="change-count-button ticket-count-change minus" type="button" onclick="this.nextElementSibling.stepDown()">
                     –
                   </button>
-                  <input type="number" min="0" max="20" value="1" class="ticket-number">
-                  <button class="ticket-count-change plus" type="button" onclick="this.previousElementSibling.stepUp()">
+                  <input type="number" min="0" max="20" value="1" class="ticket-number tickets-count ticket-number-children">
+                  <button class="change-count-button ticket-count-change plus" type="button" onclick="this.previousElementSibling.stepUp()">
                     +
                   </button>
                 </div>
@@ -364,11 +364,11 @@
                   Взрослый
                 </p>
                 <div class="ticket-counter">
-                  <button class="ticket-count-change minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                  <button class="change-count-button ticket-count-change minus" type="button" onclick="this.nextElementSibling.stepDown()">
                     –
                   </button>
-                  <input type="number" min="0" max="20" value="1" class="ticket-number">
-                  <button class="ticket-count-change plus" type="button" onclick="this.previousElementSibling.stepUp()">
+                  <input type="number" min="0" max="20" value="1" class="ticket-number tickets-count ticket-number-adult">
+                  <button class="change-count-button ticket-count-change plus" type="button" onclick="this.previousElementSibling.stepUp()">
                     +
                   </button>
                 </div>
@@ -455,6 +455,7 @@
   <script src="./scripts/video-slider.js"></script>
   <script src="./scripts/videoPlayer.js"></script>
   <script src="./scripts/beforeAfter.js"></script>
+  <script src="./scripts/billets.js"></script>
 </body>
 </html>
 
