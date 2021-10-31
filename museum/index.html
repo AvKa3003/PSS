@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+  <link rel="icon" href="assets/favicon.png" sizes="49x26">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+  <title>Vetliva</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="overlay overlay-closed">
+      <div class="container form-container">
+        <form class="ticket-form form-closed">
+          <div class="tickets-form-container">
+            <div class="form-close"></div>
+            <div class="tickets-left">
+              <img class="form-logo" src="./assets/svg/FormLogo.svg" alt="formLogo">
+              <h3 class="form-heading">Заказать билеты</h3>
+              <h4 class="form-subheading">7 чудес Беларуси</h4>
+              <div class="date-and-time">
+                <input class="form-before form-elem form-date form-arrow" type="date" name="" id="">
+                <input class="form-before form-elem form-time form-arrow" type="time" name="" id="">
+              </div>
+              <label class="form-text form-name"><input class="form-elem" type="text"  placeholder="Фио" name="" id=""></label>
+              <label class="form-text form-email"><input class="form-elem" type="email" placeholder="E-mail" name="" id=""></label>
+              <label class="form-text form-phone"><input class="form-elem" type="tel" placeholder="Телефон" name="" id=""></label>
+              <label class="form-text form-type form-select-label">
+                <select class="form-elem form-select" name="" id="">
+                  <option value="PermanentExhibition">Предвыбранные гостиницы</option>
+                  <option value="TemporaryExhibition">Самостоятельная</option>
+                </select>
+              </label>
+              <div class="entry-tickets">
+                <h4 class="entry-title">Тип билетов</h4>
+                <div class="entry-box first-entry-box">
+                  <span class="entry-type">Детский (40 $)</span>
+                  <div class="ticket-counter-form">
+                    <button class="ticket-count-change-form" type="button" onclick="this.nextElementSibling.stepDown()">
+                      –
+                    </button>
+                    <input type="number" min="0" max="20" value="1" class="ticket-count-form">
+                    <button class="ticket-count-change-form" type="button" onclick="this.previousElementSibling.stepUp()">
+                      +
+                    </button>
+                  </div>
+                </div>
+                <div class="entry-box">
+                  <span class="entry-type">Взрослый (60 $)</span>
+                  <div class="ticket-counter-form">
+                    <button class="ticket-count-change-form" type="button" onclick="this.nextElementSibling.stepDown()">
+                      –
+                    </button>
+                    <input type="number" min="0" max="20" value="1" class="ticket-count-form">
+                    <button class="ticket-count-change-form" type="button" onclick="this.previousElementSibling.stepUp()">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tickets-right">
+              <div class="tickets-head">
+                <div class="tickets-head-right">
+                  <p class="tickets-head-title">Итог</p>
+                  <p class="tickets-head-subtitle">7 чудес Беларуси</p>
+                  <div class="tickets-head-list">
+                    <p><img src="./assets/svg/FormDate.svg" alt="Date">18.11.2021</p>
+                    <p><img src="./assets/svg/FormTime.svg" alt="Time">16 : 30</p>
+                    <p><img src="./assets/svg/FormCheck.svg" alt="Check">Самостоятельная</p>
+                  </div>
+                </div>
+                <div class="tickets-head-img"></div>
+              </div>
+              <div class="tickets-amount-list">
+                <div class="tickets-amount">
+                  <div>
+                    <span class="tickets-single-amount">2</span>
+                    <span class="ticket-price">Детский (40 $)</span>
+                  </div>
+                  <span class="ticket-price">80 €</span>
+                </div>
+                <div class="tickets-amount">
+                  <div>
+                    <span class="tickets-single-amount">2</span>
+                    <span class="ticket-price">Взрослый (60 $)</span>
+                  </div>
+                  <span class="ticket-price">120 $</span>
+                </div>
+              </div>
+              <div class="total">
+                <span>Всего:</span>
+                <span class="total-price">200 €</span>
+              </div>
+              <div class="card">
+                <div class="card-top">
+                  <p class="card-label">Номер карты</p>
+                  <input class="card-form card-margin card-number" type="number" min="0" max="9999999999999999" name="" id="">
+                  <p class="card-label">Срок действия</p>
+                  <input class="card-form card-margin card-date card-date-month" type="number" min="1" max="12" name="" id="">
+                  <input class="card-form card-margin card-date" type="number" min="2000" max="2100" name="" id="">
+                  <p class="card-label">Держатель карты</p>
+                  <input class="card-form card-cardholder" type="text" name="" id="">
+                  <div class="visa"></div>
+                  <div class="mastercard"></div>
+                </div>
+                <div class="card-bottom">
+                  <div class="card-black"></div>
+                  <div class="card-bottom-info">
+                    <div class="card-cvc-label">CVC/CVV</div>
+                    <input class="card-form card-cvc" type="number" min="0" max="9999" name="" id="">
+                    <div class="card-bottom-info-disc">Последние 3 или 4 цифры сзади</div>
+                  </div>
+                </div>
+              </div>
+              <div class="submit">
+                <button class="cardSubmit" type="submit">Book</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <header class="dark-section">
+      <div class="container header-container">
+        <a href="./index.html" class="header-logo">
+          <div class="logo"></div>
+          <span class="museum-name">Vetliva</span>
+        </a>
+        <nav>
+          <ul class="main-nav">
+            <li><a href="#Visiting">Посещение</a></li>
+            <li><a href="#Explore">Исследовать</a></li>
+            <li><a href="#Video">Видео</a></li>
+            <li><a href="#Gallery">Галлерея</a></li>
+            <li><a href="#Tickets">Билеты</a></li>
+            <li><a href="#Contacts">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section welcome dark-section" id="Welcome">
+        <div class="container">
+          <!-- <div class="welcome-bgi"></div> -->
+          <div class="welcome-slider-container">
+            <div class="welcome-slider-fade"></div>
+            <div class="welcome-slider">
+              <div class="welcome-slide welcome-slide1"></div>
+              <div class="welcome-slide welcome-slide2"></div>
+              <div class="welcome-slide welcome-slide3"></div>
+              <div class="welcome-slide welcome-slide4"></div>
+              <div class="welcome-slide welcome-slide5"></div>
+            </div>
+          </div>
+          <h1 class="welcome-heading-top heading-dark-section">Почуствовать</h1>
+          <br>
+          <h2 class="welcome-heading-bot heading-dark-section">Историю и природу</h2>
+          <br>
+          <p class="slogan">Прекрасная культура на земле мира</p>
+          <br>
+          <a class="discover-link" target="_blank" href="./tour1.html">Что меня ждёт</a>
+          <div class="slider-navigator">
+            <p class="slide-number"><span class="slide-number-cur">01</span> | 05</p>
+            <div class="slide-icons">
+              <div class="slide-icon slide-icon1 slide-icon-active"></div>
+              <div class="slide-icon slide-icon2"></div>
+              <div class="slide-icon slide-icon3"></div>
+              <div class="slide-icon slide-icon4"></div>
+              <div class="slide-icon slide-icon5"></div>
+            </div>
+            <div class="slider-arrows">
+              <img src="./assets/svg/SliderArrowLeft.svg" alt="L" class="slider-left-arrow">
+              <img src="./assets/svg/SliderArrowRight.svg" alt="R" class="slider-right-arrow">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section visiting" id="Visiting">
+        <div class="container">
+          <h2 class="heading-underline">Виртуальный тур</h2>
+          <div class="cards-containter">
+            <a class="cards-item" target="_blank" href="./tour2.html">
+              <img class="card-image" src="./assets/img/tour1.jpg" alt="card1">
+              <h3 class="card-heading heading-underline underline-shirt">Беловежская пуща</h3>
+              <p class="card-text-top">360° Виртуальный тур</p>
+              <p class="card-text-bot">Google Street Panorama View</p>
+            </a>
+            <a class="cards-item" target="_blank" href="./tour3.html">
+              <img class="card-image" src="./assets/img/tour2.jpg" alt="card2">
+              <h3 class="card-heading heading-underline underline-shirt">Бобруйская крепость
+              </h3>
+              <p class="card-text-top">360° Виртуальный тур</p>
+              <p class="card-text-bot">Google Street Panorama View</p>
+            </a>
+            <a class="cards-item" target="_blank" href="./tour4.html">
+              <img class="card-image" src="./assets/img/tour3.jpg" alt="card3">
+              <h3 class="card-heading heading-underline underline-shirt">Брестская крепость</h3>
+              <p class="card-text-top">360° Виртуальный тур</p>
+              <p class="card-text-bot">Google Street Panorama View</p>
+            </a>
+            <a class="cards-item" target="_blank" href="./tour5.html">
+              <img class="card-image" src="./assets/img/tour4.jpg" alt="card4">
+              <h3 class="card-heading heading-underline underline-shirt">Костёл в Будслав</h3>
+              <p class="card-text-top">360° Виртуальный тур</p>
+              <p class="card-text-bot">Google Street Panorama View</p>
+            </a>
+            <a class="cards-item" target="_blank" href="./tour6.html">
+              <img class="card-image" src="./assets/img/tour5.jpg" alt="card5">
+              <h3 class="card-heading heading-underline underline-shirt">Мирский замок</h3>
+              <p class="card-text-top">360° Виртуальный тур</p>
+              <p class="card-text-bot">Google Street Panorama View</p>
+            </a>
+            <a class="cards-item" target="_blank" href="./tour7.html">
+              <img class="card-image" src="./assets/img/tour6.jpg" alt="card6">
+              <h3 class="card-heading heading-underline underline-shirt">Озеро Нарочь</h3>
+              <p class="card-text-top">360° Виртуальный тур</p>
+              <p class="card-text-bot">Google Street Panorama View</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section explore dark-section" id="Explore">
+        <div class="container explore-container">
+          <div class="explore-main">
+            <h2 class="heading-underline heading-dark-section">Новая жизнь</h2>
+            <p class="light-text explore-text hide768">
+              Самые цен­ные па­мят­ни­ки Бе­ла­ру­си — за­мок в Мире и дворцово-парковый ком­плекс в Не­сви­же — Вы уви­ди­те на этой экс­кур­сии. Оба объ­ек­та вне­се­ны <span class="gold-text">ЮНЕСКО</span> в Спи­сок все­мир­но­го куль­тур­но­го на­сле­дия…</p>
+            <!-- <p class="light-text explore-text hide768">It was cleaned in 1984 to remove a "yellow veil" of dust that had gathered since the previous restoration in the 19th century.</p> -->
+            <p class="light-text explore-text hide1024">Мирский замок привлекает внимание своими четкими формами и приятной для глаз цветовой гаммой, а также является одним из немногих сохранившихся образцов самобытной белорусской готики. Его башни и стены гармонично сочетаются с парковой зоной.</p>
+          </div>
+          <div class="img-comp-container">
+            <div class="img-comp-img">
+              <img src="./assets/img/before.jpg">
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+              <img src="./assets/img/after.jpg">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section video video-section" id="Video">
+        <div class="container">
+          <div class="video-under">
+            <h2 class="video-heading">Видео визит</h2>
+            <p class="light-text video-disc hide1024">Существует легенда, что Беларусь называли "страной замков", так их было много на наших землях! </p>
+          </div>
+          <!-- <div class="video-player">
+            <div class="video-container">
+              <button class="video-start-button"></button>
+              <video class="video-jorney" preload="none" src="./assets/video/video0.mp4" poster="./assets/img/VideoPoster.jpg">
+              
+              </video>
+              <input class="video-progress progress video-progress-mobile" type="range" value="0" min="0" max="100" step="0.1">
+            </div>
+            <div class="video-controls">
+
+              <button class="video-button video-play play-played"></button>
+
+              <input class="video-progress progress hide768" type="range" value="0" min="0" max="100" step="1">
+              <div class="volume">
+                <button class="video-button video-volume"></button>
+                <input class="video-volume-progress progress" type="range" value="50" min="0" max="100" step="1">
+              </div>
+              <button class="video-button video-maximize"></button>
+            </div>
+          </div> -->
+          <iframe class="main-video" src="https://www.youtube.com/embed/2cJEjqyeATM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          <div class="video-playlist-container">
+            <div class="video-playlist">
+              <iframe class="playlist-item" width="452" height="254" src="https://www.youtube.com/embed/s9BST4kQ1q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="playlist-item" width="452" height="254" src="https://www.youtube.com/embed/9Ts19Hxoiic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="playlist-item" width="452" height="254" src="https://www.youtube.com/embed/pJSp3hu-Uig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="playlist-item" width="452" height="254" src="https://www.youtube.com/embed/LEksicgFmIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="playlist-item" width="452" height="254" src="https://www.youtube.com/embed/e56ZqcRIEuQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="video-navigator">
+            <img class="video-slider-left" src="./assets/svg/VideoArrowLeft.svg" alt="L">
+            <div class="video-slider-dot video-slider-dot1 video-slider-dot-active"></div>
+            <div class="video-slider-dot video-slider-dot2"></div>
+            <div class="video-slider-dot video-slider-dot3"></div>
+            <div class="video-slider-dot video-slider-dot4"></div>
+            <div class="video-slider-dot video-slider-dot5"></div>
+            <img class="video-slider-right" src="./assets/svg/VideoArrowRight.svg" alt="R">
+          </div>
+        </div>
+      </section>
+      <section class="section dark-section gallery" id="Gallery">
+        <div class="container">
+          <h2 class="heading-dark-section gallery-heading">Галлерея</h2>
+          <div class="gallery-outer">
+            <div class="gallery-inner">
+              <div class="gallary-column column-margin">
+                <img class="gallery-item" src="./assets/img/galery/galery4.jpg" alt="gallery4">
+                <img class="gallery-item" src="./assets/img/galery/galery2.jpg" alt="gallery1">
+                <img class="gallery-item" src="./assets/img/galery/galery7.jpg" alt="gallery5">
+                <img class="gallery-item" src="./assets/img/galery/galery10.jpg" alt="gallery10">
+                <img class="gallery-item" src="./assets/img/galery/galery14.jpg" alt="gallery10">
+              </div>
+              <div class="gallary-column">
+                <img class="gallery-item" src="./assets/img/galery/galery1.jpg" alt="gallery2">
+                <img class="gallery-item" src="./assets/img/galery/galery5.jpg" alt="gallery1">
+                <img class="gallery-item" src="./assets/img/galery/galery8.jpg" alt="gallery1">
+                <img class="gallery-item" src="./assets/img/galery/galery11.jpg" alt="gallery11">
+                <img class="gallery-item" src="./assets/img/galery/galery13.jpg" alt="gallery13">
+              </div>
+              <div class="gallary-column column-margin hide768">
+                <img class="gallery-item" src="./assets/img/galery/galery3.jpg" alt="gallery3">
+                <img class="gallery-item" src="./assets/img/galery/galery6.jpg" alt="gallery1">
+                <img class="gallery-item" src="./assets/img/galery/galery9.jpg" alt="gallery1">
+                <img class="gallery-item" src="./assets/img/galery/galery12.jpg" alt="gallery12">
+              </div>
+            </div>
+            <div class="gallery-shadow"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section tickets" id="Tickets">
+        <div class="container">
+          <h2 class="heading-underline">Билеты</h2>
+          <div class="tickets-container">
+            <div class="tickets-image"></div>
+            <div class="tickets-menu">
+              <div class="ticket-type hide1024">
+                <p class="font-bold font-bold-dark ticket-type-item">
+                  Ночёвка
+                </p>
+                <ul>
+                  <li class="ticket-type-item">
+                    <input type="radio" name="ticket-type" id="ticket-type-2">
+                    <label for="ticket-type-2" class="light-text">Предвыбранные гостиницы</label>
+                  </li>
+                  <li class="ticket-type-item">
+                    <input type="radio" name="ticket-type" id="ticket-type-3">
+                    <label for="ticket-type-3" class="light-text">Самостоятельная</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="ticket-amount">
+                <p class="font-bold font-bold-dark amount-bold-text">
+                  Количество
+                </p>
+                <br>
+                <p class="light-text ticket-light">
+                  Детский
+                </p>
+                <div class="ticket-counter">
+                  <button class="ticket-count-change minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                    –
+                  </button>
+                  <input type="number" min="0" max="20" value="1" class="ticket-number">
+                  <button class="ticket-count-change plus" type="button" onclick="this.previousElementSibling.stepUp()">
+                    +
+                  </button>
+                </div>
+                <p class="light-text ticket-light">
+                  Взрослый
+                </p>
+                <div class="ticket-counter">
+                  <button class="ticket-count-change minus" type="button" onclick="this.nextElementSibling.stepDown()">
+                    –
+                  </button>
+                  <input type="number" min="0" max="20" value="1" class="ticket-number">
+                  <button class="ticket-count-change plus" type="button" onclick="this.previousElementSibling.stepUp()">
+                    +
+                  </button>
+                </div>
+                <p class="font-bold font-bold-dark amount-bold-text price-text">
+                Всего $<span class="price">60</span>
+              </p>
+              <button class="buy-now">В путь!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      <div class="paralax-block"></div>
+      <section class="section contacts" id="Contacts">
+        <div class="container">
+          <h2 class="heading-underline">Контакты</h2>
+          <div class="contacts-container">
+            <div class="contacts-main">
+              <p class="font-medium contacts-medium contacts-medium-first">Palais Royal</p>
+              <p class="font-medium contacts-medium contacts-medium-end">Musee du Louvre</p>
+              <p class="contacts-light">Адрес: 220030, Беларусь, г. Минск ул. Мясникова, 39 к. 338</p>
+              <p class="contacts-light">Телефон: +375 (17) 215-49-49</p>
+              <p class="contacts-light">Почта: office@vetliva.com</p>
+            </div>
+            <div class="contacts-map"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="dark-section">
+      <div class="section">
+        <div class="container footer-container footer-top">
+          <div class="footer-main">
+            <a href="./index.html" class="footer-logo">
+              <div class="logo"></div>
+              <span class="museum-name">Vetliva</span>
+            </a>
+            <nav class="footer-navigation footer-pc">
+              <ul class="footer-first">
+                <li><a href="#Visiting">Посещение</a></li>
+                <li><a href="#Explore">Исследовать</a></li>
+                <li><a href="#Video">Видео</a></li> 
+              </ul>
+              <ul class="footer-second">
+                <li><a href="#Gallery">Галлерея</a></li>
+                <li><a href="#Tickets">Билеты</a></li>
+                <li><a href="#Contacts">Контакты</a></li>
+              </ul>
+            </nav>
+            <nav class="footer-navigation footer-nav-mobile">
+              <ul class="footer-first">
+                <li><a href="#Visiting">Посещение</a></li>
+                <li><a href="#Explore">Исследовать</a></li>
+                <li><a href="#Video">Видео</a></li> 
+                <li><a href="#Gallery">Галлерея</a></li>
+                <li><a href="#Tickets">Билеты</a></li>
+                <li><a href="#Contacts">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <ul class="footer-links">
+            <li><a class="social-img social-pinterest" target="_blank" href="#"></a></li>
+            <li><a class="social-img social-facebook" target="_blank" href="#"></a></li>
+            <li><a class="social-img social-tweeter" target="_blank" href="#"></a></li>
+            <li><a class="social-img social-inst" target="_blank" href="#"></a></li>
+            <li><a class="social-img social-youtube" target="_blank" href="#"></a></li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-container container">
+            <span>© 2021</span>
+            <span class="hide420">МГПК</span>
+            <span>Аврамов Кирилл</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script src="./scripts/welcome-slider.js"></script>
+  <script src="./scripts/videoProgressStylization.js"></script>
+  <script src="./scripts/formSwitch.js"></script>
+  <script src="./scripts/video-slider.js"></script>
+  <script src="./scripts/videoPlayer.js"></script>
+  <script src="./scripts/beforeAfter.js"></script>
+</body>
+</html>
+
