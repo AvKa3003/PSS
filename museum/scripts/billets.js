@@ -13,6 +13,10 @@ const changeCountButtonForm = document.querySelectorAll('.change-count-button-fo
 const formChildCount = document.querySelector('.form-child-count');
 const formAdultCount = document.querySelector('.form-adult-count');
 
+const formChilds = document.querySelector('.form-childs');
+const formAdults = document.querySelector('.form-adults');
+
+const formTotalPrice = document.querySelector('.form-total-price');
 
 const price = document.querySelector('.price');
 let childBillets = 0;
@@ -20,6 +24,9 @@ let adultBillets = 0;
 let totalPrice = 0;
 
 function updatePrice() {
+    formChilds.innerHTML = 40 * childBillets;
+    formAdults.innerHTML = 60 * adultBillets;
+    formTotalPrice.innerHTML = 40 * childBillets + 60 * adultBillets;
     totalPrice = ticketNumberChildren.value * 40 + ticketNumberAdult.value * 60;
     price.innerHTML = totalPrice;
 }
@@ -55,3 +62,5 @@ for (let item of ticketsCountForm) {
 for (let item of changeCountButtonForm) {
     item.addEventListener('click', updatePriceForm);
 }
+
+updatePriceMain()
