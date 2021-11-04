@@ -328,6 +328,15 @@ h3 {
   gap: 60px;
 }
 
+.cards-containter-last {
+  margin-top: 60px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 60px;
+}
+
 /* visiting cards */
 .card-image {
   display: block;
@@ -380,6 +389,11 @@ h3 {
   font-size: 18px;
   line-height: 21px;
 }
+
+/* .last-card-item {
+  justify-self:center;
+  align-self: center;
+} */
 
 /* explore section */
 
