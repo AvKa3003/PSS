@@ -1522,6 +1522,18 @@ margin-bottom: 60px;
   display: none;
 }
 
+@media screen and (max-width: 1480px) and (min-width: 1340px) {
+  body {
+    zoom: 90%;
+  }
+}
+
+@media screen and (max-width: 1340px) and (min-width: 1024px) {
+  body {
+    zoom: 80%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .slider-navigator {
     display: none; 
