@@ -1085,6 +1085,7 @@ margin-bottom: 60px;
 }
 
 .tickets-head-img {
+  background-size:cover;
   background-image: url(./assets/img/FormImage.jpg);
   width: 150px;
   height: 120px;
