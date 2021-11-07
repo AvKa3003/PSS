@@ -64,3 +64,4 @@ for (let item of changeCountButtonForm) {
 }
 
 updatePriceMain()
+

@@ -11,11 +11,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
-  <title>Vetliva</title>
+  <title>Ladcost</title>
 </head>
 
 <body>
   <div class="wrapper">
+    <a href="#">
+      <div class="backToTop backToTopHidden">
+        <img class="backToTopIcon" src="./assets/svg/ToTopArrow.svg" alt="backToTopIcon">
+      </div>
+    </a>
     <div class="overlay overlay-closed">
       <div class="container form-container">
         <form class="ticket-form form-closed">
@@ -164,9 +169,9 @@
           <br>
           <h2 class="welcome-heading-bot heading-dark-section">7 чудес Беларуси</h2>
           <br>
-          <p class="slogan">Прекрасная культура на земле мира</p>
+          <p class="slogan">Страна замков, голубых рек и озер</p>
           <br>
-          <a class="discover-link" target="_blank" href="./tour1.html">Что меня ждёт</a>
+          <a class="discover-link" href="#Visiting">Что меня ждёт</a>
           <div class="slider-navigator">
             <p class="slide-number"><span class="slide-number-cur">01</span> | 05</p>
             <div class="slide-icons">
@@ -195,8 +200,7 @@
             </a>
             <a class="cards-item" target="_blank" href="./tour3.html">
               <img class="card-image" src="./assets/img/tour2.jpg" alt="card2">
-              <h3 class="card-heading heading-underline underline-shirt">Бобруйская крепость
-              </h3>
+              <h3 class="card-heading heading-underline underline-shirt">Бобруйская крепость</h3>
               <p class="card-text-top">360° Виртуальный тур</p>
               <p class="card-text-bot">Google Street Panorama View</p>
             </a>
@@ -458,11 +462,12 @@
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script src="./scripts/backToTop.js"></script>
   <script src="./scripts/welcome-slider.js"></script>
-  <script src="./scripts/videoProgressStylization.js"></script>
+  <!-- <script src="./scripts/videoProgressStylization.js"></script> -->
   <script src="./scripts/formSwitch.js"></script>
   <script src="./scripts/video-slider.js"></script>
-  <script src="./scripts/videoPlayer.js"></script>
+  <!-- <script src="./scripts/videoPlayer.js"></script> -->
   <script src="./scripts/beforeAfter.js"></script>
   <script src="./scripts/billets.js"></script>
 </body>
