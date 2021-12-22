@@ -10,10 +10,15 @@ buyBtn.addEventListener("click", () => {
   overlay.classList.add("overlay-opened");
 });
 
-close.addEventListener("click", () => {
+function closeForm() {
   form.classList.remove("form-opened");
   form.classList.add("form-closed");
   overlay.classList.remove("overlay-opened");
   overlay.classList.add("overlay-closed");
+}
 
-});
+close.addEventListener("click", closeForm);
+
+window.onhashchange = function() {
+  closeForm();
+}   

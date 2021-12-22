@@ -3,7 +3,6 @@ var sliderVideo = tns(
     "container": ".video-playlist",
     "items": 3,
     "slideBy": 1,
-    //"mouseDrag": true,
     "swipeAngle": false,
     "speed": 400,
     "controls": false,
@@ -13,7 +12,6 @@ var sliderVideo = tns(
   }
 );
 
-// const curWelcomeSlide = document.querySelector('.slide-number-cur');
 
 document.querySelector('.video-slider-left').onclick = function () {
   sliderVideo.goTo('prev');
@@ -34,9 +32,3 @@ for (let i = 1; i <= 5; i++) {
     e.target.classList.add('video-slider-dot-active');
   });
 }
-
-// slider.events.on('indexChanged', () => {
-//   curWelcomeSlide.innerHTML = '0' + slider.getInfo().displayIndex;
-//   clearSelecter();
-//   document.querySelector('.slide-icon' + (slider.getInfo().displayIndex)).classList.add('slide-icon-active');
-// })

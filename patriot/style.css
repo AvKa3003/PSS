@@ -328,6 +328,15 @@ h3 {
   gap: 60px;
 }
 
+.cards-containter-last {
+  margin-top: 60px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 60px;
+}
+
 /* visiting cards */
 .card-image {
   display: block;
@@ -380,6 +389,11 @@ h3 {
   font-size: 18px;
   line-height: 21px;
 }
+
+/* .last-card-item {
+  justify-self:center;
+  align-self: center;
+} */
 
 /* explore section */
 
@@ -777,11 +791,12 @@ input[name=ticket-type]:checked ~ label::before {
 .amount-bold-text {
   margin-bottom: 5px;
   float: right;
+  font-size: 24px;
 }
 
 .price-text {
   margin-top: 15px;
-  letter-spacing: 1.65px;
+  /* letter-spacing: 1.65px; */
 }
 
 .buy-now {
@@ -1070,6 +1085,7 @@ margin-bottom: 60px;
 }
 
 .tickets-head-img {
+  background-size:cover;
   background-image: url(./assets/img/FormImage.jpg);
   width: 150px;
   height: 120px;
@@ -1306,7 +1322,12 @@ margin-bottom: 60px;
   line-height: 26px;
   border: none;
   color: white;
+  transition: all ease .3s;
 } 
+
+.cardSubmit:hover {
+  background-color: #9D8665;
+}
 
 .form-closed {
   right: 100vw;
@@ -1519,6 +1540,44 @@ margin-bottom: 60px;
 
 .footer-nav-mobile {
   display: none;
+}
+
+.backToTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #9D8665;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  visibility: visible;
+  opacity: 1;
+  transition: all ease .3s;
+}
+
+.backToTopIcon {
+  transform: rotate(90deg);
+  fill: rgb(122, 0, 0);
+  color: #710707;
+}
+
+.backToTopHidden {
+  visibility: hidden;
+  opacity: 0;
+}
+@media screen and (max-width: 1480px) and (min-width: 1340px) {
+  body {
+    zoom: 90%;
+  }
+}
+
+@media screen and (max-width: 1340px) and (min-width: 1024px) {
+  body {
+    zoom: 80%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
