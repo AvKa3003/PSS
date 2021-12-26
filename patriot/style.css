@@ -303,6 +303,28 @@ h3 {
   margin-right: 20px;
 }
 
+/* About */
+.about {
+  display: flex;
+  flex-direction: row;
+  text-indent: 60px;
+}
+
+.about-image {
+  display: block;
+  align-self: center;
+  margin: 0 60px;
+}
+.about-item {
+  text-align: justify;
+  width: 33%;
+}
+
+.about-third {
+  align-self: flex-end;
+  margin-top: 120px;
+}
+
 /* visiting */
 .heading-underline {
   position: relative;
